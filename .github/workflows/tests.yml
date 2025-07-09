@@ -19,6 +19,7 @@ jobs:
         # we can run multiline commands like this
         run: |
           pwd
+          ls -la
           python -m unittest
 
         
