@@ -3,7 +3,7 @@ name: Python Tests
 on:
   push: 
     branches: ['main']
-  pull-request: # trigger when pr is created to main branch
+  pull_request: # trigger when pr is created to main branch
     branches: ['main']
   workflow_dispatch: # manual trigger
   repository_dispatch: # trigger via outside events
