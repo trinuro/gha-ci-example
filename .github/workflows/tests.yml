@@ -17,7 +17,7 @@ jobs:
         run: echo "Hello $GITHUB_ACTOR, happy learning!" 
         # GITHUB_ACTOR is a default variable which stores the user currently running the workflow
       - name: "Import Repository" 
-        # use "uses" to import the repository to the container
+        # "uses" keyword allows us to use a github action
         uses: actions/checkout@v4
       - name: "Run Unit Test"
         # we can run multiline commands like this
