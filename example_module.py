@@ -1,4 +1,4 @@
-def sum(input: list) -> int:
+def mysum(input: list) -> int:
     output = 0
     for i in input:
         output += i 
