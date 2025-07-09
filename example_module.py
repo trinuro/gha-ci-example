@@ -19,9 +19,16 @@ def find_missing_number(A:list, p:int, q:int) -> int:
     else:
         return find_missing_number(A,m+1,q)
 
-def counting_sort(A:list, B:list, n:int):
+def counting_sort(A:list, n:int):
+    '''
+    A is the array to be sorted
+    n is the maximum value of an element in the array
+    A is not affected by the sort
+    '''
     m = len(A)
     C = [None]*(n+1)
+    B=[None]*len(A)
+
     # print(C)
     for i in range(0,n+1):
         C[i] = 0
@@ -35,3 +42,4 @@ def counting_sort(A:list, B:list, n:int):
     for i in range(0,m):
         B[C[A[i]]-1] = A[i] # A[i]-1 to compensate for 0-index in Python
         C[A[i]] = C[A[i]] - 1
+    return B
