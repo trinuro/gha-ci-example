@@ -13,14 +13,14 @@ jobs:
     runs-on: ubuntu-latest # use linux machine
     steps:
       - name: "Hello World"
+        # use run to execute commands in the container
         run: echo "Hello $GITHUB_ACTOR, happy learning!" 
         # GITHUB_ACTOR is a default variable which stores the user currently running the workflow
+      - name: "Import Repository" 
+        # use "uses" to import the repository to the container
+        uses: actions/checkout@v4
       - name: "Run Unit Test"
         # we can run multiline commands like this
         run: |
-          pwd
-          cd ..
           ls -la
-          python -m unittest
-
-        
+          python -m unittest        
