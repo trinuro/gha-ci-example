@@ -1,9 +1,3 @@
-def mysum(input: list) -> int:
-    output = 0
-    for i in input:
-        output += i 
-    return output
-
 def find_missing_number(A:list, p:int, q:int) -> int:
     '''
     This code will find the missing number in a list in the ascending order.
@@ -43,3 +37,7 @@ def counting_sort(A:list, n:int):
         B[C[A[i]]-1] = A[i] # A[i]-1 to compensate for 0-index in Python
         C[A[i]] = C[A[i]] - 1
     return B
+
+
+if __name__=="__main__":
+    print(counting_sort([4,2,3,3,2],4))
