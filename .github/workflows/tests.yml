@@ -1,0 +1,17 @@
+name: Python Tests
+
+on:
+  push: 
+    branches: ['main']
+  pull-request: # trigger when pr is created to main branch
+    branches: ['main']
+  workflow_dispatch: # manual trigger
+  repository_dispatch: # trigger via outside events
+
+jobs:
+  test: # name of job (can be "job1" etc)
+    runs-on: ubuntu-latest # use linux machine
+    steps:
+      - name: "Hello World"
+        run: echo "Hello $GITHUB_ACTOR"
+        
