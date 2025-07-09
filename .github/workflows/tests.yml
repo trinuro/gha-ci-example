@@ -13,5 +13,12 @@ jobs:
     runs-on: ubuntu-latest # use linux machine
     steps:
       - name: "Hello World"
-        run: echo "Hello $GITHUB_ACTOR"
+        run: echo "Hello $GITHUB_ACTOR, happy learning!" 
+        # GITHUB_ACTOR is a default variable which stores the user currently running the workflow
+      - name: "Run Unit Test"
+        # we can run multiline commands like this
+        run: |
+          pwd
+          python -m unittest
+
         
